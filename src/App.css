@@ -1,0 +1,166 @@
+.App {
+  padding: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.App.blurred .App-content {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.App-content {
+  transition: filter 0.3s ease;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #39afbd;
+  border-radius: 5px;
+  color: #fff;
+  border-color: #39afbd;
+}
+
+.right-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.right-panel.open {
+  transform: translateX(0);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0px 20px;
+  background-color: #39afbd;
+  color: #fff;
+}
+
+.close-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.panel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  font-size: 14px;
+  padding: 20px;
+  max-height: 85%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.panel-header-container {
+  background-color: #f7f7f7;
+}
+.panel-content h3 {
+  margin-bottom: 10px;
+}
+
+.panel-content input,
+.panel-content select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.schema-box {
+  border: 1px solid #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 318px;
+}
+
+.schema-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.schema-item select {
+  flex: 1;
+}
+
+.schema-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.schema-item button:hover {
+  background-color: #c82333;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+.add-schema-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-schema-button:hover {
+  background-color: #0056b3;
+}
